@@ -8,7 +8,7 @@ for file in os.listdir():
     if file.endswith(".xml"):
         flashfile = file
 
-print("Using XML File " + file)
+print("Using XML File " + flashfile)
 
 flashdata = ET.parse(flashfile)
 flashdata = flashdata.getroot()

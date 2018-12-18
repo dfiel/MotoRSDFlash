@@ -2,13 +2,12 @@ import xml.etree.ElementTree as ET
 import subprocess
 import time
 import os
-import hashlib
 
-for file in os.listdir():
+for file in os.listdir("."):
     if file.endswith(".xml"):
         flashfile = file
 
-print("Using XML File " + file)
+print("Using XML File " + flashfile)
 
 flashdata = ET.parse(flashfile)
 flashdata = flashdata.getroot()
